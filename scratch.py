@@ -8,9 +8,11 @@ import gspread
 
 # opening the sheet
 gc = gspread.service_account()
-sh1 = gc.open_by_url('https://docs.google.com/spreadsheets/d/1W9OYU-Pw_moKfpbV9G4PgoLLqx1474criKSRsdx_w58/edit?usp=sharing')
+sh1 = gc.open_by_url(
+    'https://docs.google.com/spreadsheets/d/1W9OYU-Pw_moKfpbV9G4PgoLLqx1474criKSRsdx_w58/edit?usp=sharing')
 ledger = sh1.sheet1
-sh2 = gc.open_by_url('https://docs.google.com/spreadsheets/d/1toDU2lz_8FoDoxQGp7FqaccdyTXgevBY6fwTkXqUKLw/edit?usp=sharing')
+sh2 = gc.open_by_url(
+    'https://docs.google.com/spreadsheets/d/1toDU2lz_8FoDoxQGp7FqaccdyTXgevBY6fwTkXqUKLw/edit?usp=sharing')
 form = sh2.sheet1
 
 # this extracts the text from ____.pdf, which will be used to fill in the fields required on reimbursement forms
